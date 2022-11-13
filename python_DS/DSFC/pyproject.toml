@@ -1,0 +1,27 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "zixsa", email = "dbdf0147@gmail.com"},
+]
+dependencies = [
+    "click>=8.1.3",
+    "black>=22.10.0",
+    "numpy>=1.23.4",
+    "pandas>=1.5.1",
+]
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "black"
+]
+
+[tool.pdm.scripts]
+start = "python main.py"
