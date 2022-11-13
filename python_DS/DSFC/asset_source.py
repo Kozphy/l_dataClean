@@ -5,7 +5,6 @@ ROOT_DIR = Path.cwd()
 ASSET_SOURCE = Path(ROOT_DIR, "asset")
 
 # print(ASSET_SOURCE)
-# TODO: add sector directory
 
 SOURCE_SECTOR = [
     {"id": 0, "sector": "NATIONAL_LIBRARY"},

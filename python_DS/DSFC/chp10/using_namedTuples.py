@@ -26,6 +26,3 @@ class StockPrice(NamedTuple):
         It's a class, so we can add methods too
         """
         return self.symbol in ["MSFT", "GOOG", "FB", "AMZN", "AAPL"]
-
-
-price = StockPrice("MSFT", datetime.date(2018, 12, 14), 106.03)

@@ -47,6 +47,12 @@ Setting `default_factory` to `int`:
 
 ## Counter object
 
+A Counter is a **dict subclass for counting hashable objects**.
+
+It is a collection where **elements are stored as dictionary keys and their counts are stored as dictionary values**.
+
+Counts are **allowed to be any integer value including zero or negative counts**.
+
 - elements()
 - most_common()
 - subtract()
