@@ -1,6 +1,6 @@
 import click
 from chp1 import intro
-
+from chp6 import condition_probability
 from chp9 import clean_gov
 from chp10 import (
     using_namedTuples,
@@ -13,6 +13,10 @@ from chp10 import (
 @click.command()
 def cli():
     Exec_chp()
+
+
+def Exec_chp6():
+    condition_probability.Exec_condition_probability()
 
 
 def Exec_chp9():
@@ -31,7 +35,8 @@ def Exec_chp():
     # intro.Exec_data_scientists_who_like()
     # clean_gov.clean_national_library()
     # intro.Exec_salary_by_tenure()
-    Exec_chp10()
+    Exec_chp6()
+    # Exec_chp10()
 
 
 if __name__ == "__main__":

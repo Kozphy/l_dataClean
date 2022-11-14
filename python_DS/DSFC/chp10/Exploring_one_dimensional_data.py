@@ -26,5 +26,4 @@ def plot_histogram(points: List[float], bucket_size: float, title: str = ""):
     plt.title(title)
 
 
-def Exec_1d_data():
-    
+# def Exec_1d_data():
