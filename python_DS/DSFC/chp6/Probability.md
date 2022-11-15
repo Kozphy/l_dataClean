@@ -102,3 +102,12 @@ $$
 P(B|L) = P(B,L)/P(L) = P(B)/P(L) = \frac{1}{3}\\
 P(GG) / (1-P(BB)) = \frac{0.25}{0.75} = \frac{1}{3}
 $$
+
+## The Normal Distribution
+
+The **normal distribution** is the classic bell curve–shaped distribution and is completely **determined by two parameters**: its `mean μ (mu)` and its `standard deviation σ (sigma)`.
+
+The `mean` indicates where the **bell is centered**, and the `standard deviation` **how “wide”** it is.
+
+$$
+$$
