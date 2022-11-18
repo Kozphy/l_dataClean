@@ -4,6 +4,7 @@ import math
 
 import matplotlib.pyplot as plt
 import random
+from chp6.scratch.probability import inverse_normal_cdf
 
 
 def bucketize(point: float, bucket_size: float) -> float:
@@ -26,4 +27,20 @@ def plot_histogram(points: List[float], bucket_size: float, title: str = ""):
     plt.title(title)
 
 
-# def Exec_1d_data():
+def Exec_1d_data():
+    print("start Exec 1d data")
+    random.seed(0)
+
+    uniform = [200 * random.random() - 100 for _ in range(10000)]
+
+    normal = [57 * inverse_normal_cdf(random.random()) for _ in range(10000)]
+
+    plot_histogram(uniform, 10, "Uniform Histogram")
+
+    # plot_histogram(normal, 10, "Normal Histogram")
+    plt.show()
+
+
+# Exec_1d_data()
+
+# %%

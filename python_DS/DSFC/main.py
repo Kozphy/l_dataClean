@@ -1,13 +1,18 @@
 import click
+
 from chp1 import intro
 from chp6 import condition_probability
 from chp9 import clean_gov
+
+#%%
 from chp10 import (
     using_namedTuples,
-    dataclasses,
+    dataclasses_l,
     clean_mung,
     Exploring_one_dimensional_data,
 )
+
+#%%
 
 
 @click.command()
@@ -24,19 +29,23 @@ def Exec_chp9():
     return
 
 
+#%%
 def Exec_chp10():
-    clean_mung.clean_and_mung()
-    Exploring_one_dimensional_data.plot_histogram()
+    # clean_mung.clean_and_mung()
+    Exploring_one_dimensional_data.Exec_1d_data()
 
 
+#%%
 def Exec_chp():
     # intro.Exec_find_key_connect()
     # intro.Exec_DataScientists_You_May_Know()
     # intro.Exec_data_scientists_who_like()
     # clean_gov.clean_national_library()
     # intro.Exec_salary_by_tenure()
-    Exec_chp6()
-    # Exec_chp10()
+    # Exec_chp6()
+    Exec_chp10()
+
+    #%%
 
 
 if __name__ == "__main__":
