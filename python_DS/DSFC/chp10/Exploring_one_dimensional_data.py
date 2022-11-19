@@ -42,5 +42,3 @@ def Exec_1d_data():
 
 
 # Exec_1d_data()
-
-# %%

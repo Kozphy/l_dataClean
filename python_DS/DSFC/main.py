@@ -1,6 +1,7 @@
 import click
 
 from chp1 import intro
+from chp4 import vectors
 from chp6 import condition_probability
 from chp9 import clean_gov
 
@@ -18,6 +19,10 @@ from chp10 import (
 @click.command()
 def cli():
     Exec_chp()
+
+
+# def Exec_chp4():
+#     vectors.add()
 
 
 def Exec_chp6():
