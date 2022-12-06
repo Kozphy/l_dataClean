@@ -1,18 +1,8 @@
 import numpy as np
 import pprint
+import random
 
-"""
-[
-   [
-      [1,2,3],
-      [4,5,6],
-   ],
-   [
-       [7,8,9],
-    [10,11,12],
-   ],
-]
-"""
+
 arr3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 
 
@@ -71,141 +61,6 @@ def fancy_indexing():
     print(f"arr[[1,5,7,2]][:, [0,3,1,2]]: {arr[[1,5,7,2]][:, [0,3,1,2]]}")
 
 
-"""
-[
-    [
-        [0,1,2,3],
-        [4,5,6,7]
-    ],
-    [
-        [8,9,10,11],
-        [12,13,14,15]
-    ]
-]
-
-"""
-
-"""
-[
-    [
-        [0,1,2,3],
-        [8,9,10,11],
-    ],
-    [
-        [4,5,6,7],
-        [12,13,14,15],
-    ]
-]
-"""
-
-""" 6,5,2
- [
-    [
-        [ 0  1]
-        [ 2  3]
-        [ 4  5]
-        [ 6  7]
-        [ 8  9]
-    ]
-    [
-        [10 11]
-        [12 13]
-        [14 15]
-        [16 17]
-        [18 19]
-    ]
-    [
-        [20 21]
-        [22 23]
-        [24 25]
-        [26 27]
-        [28 29]
-    ]
-    [
-        [30 31]
-        [32 33]
-        [34 35]
-        [36 37]
-        [38 39]
-    ]
-    [
-        [40 41]
-        [42 43]
-        [44 45]
-        [46 47]
-        [48 49]
-    ]
-    [
-        [50 51]
-        [52 53]
-        [54 55]
-        [56 57]
-        [58 59]
-    ]
-]
-"""
-
-"""
-[
-    [
-        [ 0  1]
-        [10 11]
-        [20 21]
-        [30 31]
-        [40 41]
-        [50 51]
-    ]
-    [
-        [ 2  3]
-        [12 13]
-        [22 23]
-        [32 33]
-        [42 43]
-        [52 53]
-    ]
-    [
-        [ 4  5]
-        [14 15]
-        [24 25]
-        [34 35]
-        [44 45]
-        [54 55]
-    ]
-    [
-        [ 6  7]
-        [16 17]
-        [26 27]
-        [36 37]
-        [46 47]
-        [56 57]
-    ]
-    [
-        [ 8  9]
-        [18 19]
-        [28 29]
-        [38 39]
-        [48 49]
-        [58 59]
-    ]
-]
-
-"""
-"""
-        [[[ 0,  1],
-        [ 8,  9]],
-
-       [[ 2,  3],
-        [10, 11]],
-
-       [[ 4,  5],
-        [12, 13]],
-
-       [[ 6,  7],
-        [14, 15]]]
-
-"""
-
-
 def transpose_array_swap_axes():
     # arr = np.arange(15).reshape((3, 5))
     # print(f"arr:{arr}")
@@ -247,3 +102,36 @@ def math_statistical_method():
     large_arr = np.random.randn(1000)
     large_arr.sort()
     print(large_arr[int(0.05 * len(large_arr))])
+
+
+def random_walk():
+    position = 0
+    walk = [position]
+    steps = 1000
+    for i in range(steps):
+        # print(random.randint(0, 1))
+        step = 1 if random.randint(0, 1) else -1
+        position += step
+        walk.append(position)
+    # print(walk)
+    print(np.abs(walk) >= 10)
+    print((np.abs(walk) >= 10).argmax())
+
+
+def simulating_random_work():
+    nwalks = 5000
+    nsteps = 1000
+    draws = np.random.randint(0, 2, size=(nwalks, nsteps))
+    steps = np.where(draws > 0, 1, -1)
+    # column
+    walks = steps.cumsum(1)
+    # print(walks)
+    # print(walks.shape)
+    hits30 = (np.abs(walks) >= 30).any(1)
+    # print(hits30)
+    # print(hits30.sum())
+    print(np.abs(walks[hits30] >= 30))
+
+    crossing_times = (np.abs(walks[hits30] >= 30)).argmax(1)
+    print(crossing_times)
+    # print(crossing_times.mean())
