@@ -31,10 +31,12 @@ def Exec_chp4():
 
 def Exec_chp5():
     # dataframe_t.create_dframe2()
-    dataframe_t.nest_dict_create_dataframe()
+    # dataframe_t.nest_dict_create_dataframe()
     # dataframe_t.dict_series_dataframe()
-    dataframe_t.dataframe_index_column()
-    dataframe_t.dataframe_index_object()
+    # dataframe_t.dataframe_index_column()
+    # dataframe_t.dataframe_index_object()
+    # dataframe_t.dataframe_reindex()
+    dataframe_t.dataframe_indexing_selection_filtering()
 
 
 def Exec_chp():
