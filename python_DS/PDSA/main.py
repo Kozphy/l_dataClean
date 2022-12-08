@@ -36,7 +36,16 @@ def Exec_chp5():
     # dataframe_t.dataframe_index_column()
     # dataframe_t.dataframe_index_object()
     # dataframe_t.dataframe_reindex()
-    dataframe_t.dataframe_indexing_selection_filtering()
+    # dataframe_t.dataframe_indexing_selection_filtering()
+    # dataframe_t.indexing_integer()
+    # dataframe_t.add_arth_together()
+    # dataframe_t.arthmetic_with_fill_values()
+    # dataframe_t.operation_between_df_se()
+    # dataframe_t.func_app_mapping()
+    # dataframe_t.sort_and_rank()
+    # dataframe_t.axis_indexs_with_duplicate_labels()
+    # dataframe_t.summerize_compute_sta()
+    dataframe_t.correlation_corvariance()
 
 
 def Exec_chp():
