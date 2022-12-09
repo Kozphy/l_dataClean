@@ -2,6 +2,7 @@ import click
 from chp3 import generator_iter
 from chp4 import basic_index_slice
 from chp5 import dataframe_t
+from chp6 import data_load_storage_file_format
 
 
 @click.command()
@@ -45,13 +46,22 @@ def Exec_chp5():
     # dataframe_t.sort_and_rank()
     # dataframe_t.axis_indexs_with_duplicate_labels()
     # dataframe_t.summerize_compute_sta()
-    dataframe_t.correlation_corvariance()
+    # dataframe_t.correlation_corvariance()
+    dataframe_t.Unique_values_counts_membership()
+
+
+def Exec_chp6():
+    # data_load_storage_file_format.Reading_Writing_Data()
+    # data_load_storage_file_format.Reading_Text_Files_in_Pieces()
+    # data_load_storage_file_format.Writing_data_to_text_format()
+    data_load_storage_file_format.Working_with_other_delimited_formmat()
 
 
 def Exec_chp():
     # Exec_chp3()
     # Exec_chp4()
-    Exec_chp5()
+    # Exec_chp5()
+    Exec_chp6()
 
 
 if __name__ == "__main__":

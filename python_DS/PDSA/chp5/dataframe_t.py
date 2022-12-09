@@ -3,6 +3,10 @@ import numpy as np
 import pandas_datareader as pdr
 
 
+def print_content(name: str, content):
+    print(f"\n{name}:\n {content}")
+
+
 data = {
     "state": ["Ohio", "Ohio", "Ohio", "Nevada", "Nevada", "Nevada"],
     "year": [2000, 2001, 2002, 2001, 2002, 2003],
@@ -327,6 +331,35 @@ def correlation_corvariance():
 
     print_content("returns.corrwith(returns.IBM)", returns.corrwith(returns.IBM))
 
+    print_content("returns.corrwith(volume)", returns.corrwith(volume))
 
-def print_content(name: str, content):
-    print(f"\n{name}:\n {content}")
+
+def Unique_values_counts_membership():
+    obj = pd.Series(["c", "a", "d", "a", "a", "b", "b", "c", "c"])
+    uniques = obj.unique()
+    # print_content(f"uniques", uniques)
+    # print_content(f"obj.value_counts()", obj.value_counts())
+
+    mask = obj.isin(["b", "c"])
+    # print_content("mask", mask)
+    # print_content("obj[mask]", obj[mask])
+    to_match = pd.Series(["c", "a", "b", "b", "c", "a"])
+    unique_values = pd.Series(["c", "b", "a"])
+
+    # print_content(
+    #     "pd.Index(unique_values).get_indexer(to_match)",
+    #     pd.Index(unique_values).get_indexer(to_match),
+    # )
+
+    data = pd.DataFrame(
+        {
+            "Qu1": [1, 3, 4, 3, 4],
+            "Qu2": [2, 3, 1, 2, 3],
+            "Qu3": [1, 5, 2, 4, 4],
+        }
+    )
+
+    print_content("data", data)
+
+    result = data.apply(pd.value_counts).fillna(0)
+    print_content("result", result)
